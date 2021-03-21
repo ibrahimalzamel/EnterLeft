@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{34F2BC44-0216-4E80-A1BD-9A6CA86E9269}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>EnterLeft</RootNamespace>
+    <AssemblyName>EnterLeft</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.1\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.HashCode.1.1.1\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore, Version=3.1.11.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.EntityFrameworkCore.3.1.11\lib\netstandard2.0\Microsoft.EntityFrameworkCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore.Abstractions, Version=3.1.11.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.EntityFrameworkCore.Abstractions.3.1.11\lib\netstandard2.0\Microsoft.EntityFrameworkCore.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Abstractions, Version=3.1.11.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Caching.Abstractions.3.1.11\lib\netstandard2.0\Microsoft.Extensions.Caching.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Memory, Version=3.1.11.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Caching.Memory.3.1.11\lib\netstandard2.0\Microsoft.Extensions.Caching.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration, Version=3.1.11.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.3.1.11\lib\netstandard2.0\Microsoft.Extensions.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=3.1.11.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Abstractions.3.1.11\lib\netstandard2.0\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Binder, Version=3.1.11.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Binder.3.1.11\lib\netstandard2.0\Microsoft.Extensions.Configuration.Binder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=3.1.11.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.3.1.11\lib\net461\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=3.1.11.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.3.1.11\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging, Version=3.1.11.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.3.1.11\lib\netstandard2.0\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=3.1.11.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.3.1.11\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=3.1.11.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Options.3.1.11\lib\netstandard2.0\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=3.1.11.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.3.1.11\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=1.2.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.1.7.1\lib\net461\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.7.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.7.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.7.1\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminForms\LoginAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\LoginAdmin.Designer.cs">
+      <DependentUpon>LoginAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="anasayfa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="anasayfa.Designer.cs">
+      <DependentUpon>anasayfa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EtiketForms\Etiket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EtiketForms\Etiket.Designer.cs">
+      <DependentUpon>Etiket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EtiketForms\LoginEtiket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EtiketForms\LoginEtiket.Designer.cs">
+      <DependentUpon>LoginEtiket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaturaForms\Fatura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaturaForms\Fatura.Designer.cs">
+      <DependentUpon>Fatura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaturaForms\LoginFatura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaturaForms\LoginFatura.Designer.cs">
+      <DependentUpon>LoginFatura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MekaKontrolForms\LoginMekaKontrol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MekaKontrolForms\LoginMekaKontrol.Designer.cs">
+      <DependentUpon>LoginMekaKontrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MekaKontrolForms\MekaKontrol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MekaKontrolForms\MekaKontrol.Designer.cs">
+      <DependentUpon>MekaKontrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MusterilerForms\LoginMusteriler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MusterilerForms\LoginMusteriler.Designer.cs">
+      <DependentUpon>LoginMusteriler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MusterilerForms\Müşteriler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MusterilerForms\Müşteriler.Designer.cs">
+      <DependentUpon>Müşteriler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OfferForms\LoginOffer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OfferForms\LoginOffer.Designer.cs">
+      <DependentUpon>LoginOffer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OfferForms\Offer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OfferForms\Offer.Designer.cs">
+      <DependentUpon>Offer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SAForms\LoginSA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SAForms\LoginSA.Designer.cs">
+      <DependentUpon>LoginSA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SAForms\SA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SAForms\SA.Designer.cs">
+      <DependentUpon>SA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsForms\LoginSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsForms\LoginSettings.Designer.cs">
+      <DependentUpon>LoginSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsForms\Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsForms\Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdminForms\LoginAdmin.resx">
+      <DependentUpon>LoginAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="anasayfa.ar.resx">
+      <DependentUpon>anasayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="anasayfa.resx">
+      <DependentUpon>anasayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EtiketForms\Etiket.resx">
+      <DependentUpon>Etiket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EtiketForms\LoginEtiket.resx">
+      <DependentUpon>LoginEtiket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaturaForms\Fatura.resx">
+      <DependentUpon>Fatura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaturaForms\LoginFatura.resx">
+      <DependentUpon>LoginFatura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MekaKontrolForms\LoginMekaKontrol.resx">
+      <DependentUpon>LoginMekaKontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MekaKontrolForms\MekaKontrol.resx">
+      <DependentUpon>MekaKontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MusterilerForms\LoginMusteriler.resx">
+      <DependentUpon>LoginMusteriler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MusterilerForms\Müşteriler.resx">
+      <DependentUpon>Müşteriler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OfferForms\LoginOffer.resx">
+      <DependentUpon>LoginOffer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OfferForms\Offer.resx">
+      <DependentUpon>Offer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SAForms\LoginSA.resx">
+      <DependentUpon>LoginSA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SAForms\SA.resx">
+      <DependentUpon>SA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsForms\LoginSettings.resx">
+      <DependentUpon>LoginSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsForms\Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
