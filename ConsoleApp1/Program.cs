@@ -1,6 +1,11 @@
 ﻿using DataAccess.Concrete.EntityFramework;
+using Entities.Concrete;
 using Entities.Concrete.MusterilerClass;
+using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Expressions;
 
 namespace ConsoleApp1
 {
@@ -8,21 +13,38 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            using (NorthwindContext db = new NorthwindContext())
+           
+            Add(new Brand { BrandId = 21, BrandName = "iboo" });
+        }
+        public static List<Brand> Brands(Expression<Func<Brand, bool>> filter = null)
+        {
+            using (NorthwindContext context = new NorthwindContext())
             {
-                db.Musteriler.Add(new Musteriler
-                {
-                    MusteriID = 1,
-                    Address = "addr",
-                    CompanyName = "com",
-                    MusteriName = "name",
-                    Country = "con",
-                    MusteriKodID = 53543,
-                    Telefon = "asdfasdf",
-                    Email = "aksfkl",
-                    DestenationPort = "asdflkjasdf"
-                }) ;
+                return filter == null
+                    ? context.Set<Brand>().ToList()
+                    : context.Set<Brand>().Where(filter).ToList();
+            }
+        }
+        public static void Add(Brand entity)
+        {
+            using (NorthwindContext context = new NorthwindContext())
+            {
+                var addedEntity = context.Entry(entity);
+                addedEntity.State = EntityState.Added;
+                context.SaveChanges();
+            }
+        }
+
+        public static void Delete(Brand entity)
+        {
+            using (NorthwindContext context = new NorthwindContext())
+            {
+                var deletedEntity = context.Entry(entity);
+                deletedEntity.State = EntityState.Deleted;
+                context.SaveChanges();
             }
         }
     }
+   
+
 }

@@ -34,9 +34,14 @@ namespace Business.Concrete
             return _musterilerDal.GetAll();
         }
 
-        public Musteriler GetById(string musterilerID)
+        public Musteriler GetById(int musterilerID)
         {
-            return _musterilerDal.Get(m=>m.MusteriID==musterilerID);
+            return _musterilerDal.Get(m=>m.MusteriID == musterilerID);
+        }
+
+        public Musteriler GetById(string MusterilerID)
+        {
+            throw new NotImplementedException();
         }
 
         public void Update(Musteriler musteriler)
